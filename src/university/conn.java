@@ -7,11 +7,10 @@ public class conn{
     Statement s;
     public conn(){  
         try{  
-            Class.forName("com.mysql.jdbc.Driver");  
-            c =DriverManager.getConnection("jdbc:mysql:///ums","root","mysql123");    
+            Class.forName("com.mysql.cj.jdbc.Driver");  
+            c =DriverManager.getConnection("jdbc:mysql:///ums","root","root"); 
             s =c.createStatement();  
             
-           
         }catch(Exception e){ 
             System.out.println(e);
         }  
